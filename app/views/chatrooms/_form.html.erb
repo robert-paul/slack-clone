@@ -1,7 +1,7 @@
 <%= form_for(chatroom) do |f| %>
   <% if chatroom.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(chatroom.errors.count, "error") %> prohibited this chatroom from being saved:</h2>
+      <h2><%= pluralize(chatroom.errors.count, "error") %> prohibited this channel from being created:</h2>
 
       <ul>
       <% chatroom.errors.full_messages.each do |message| %>
@@ -17,6 +17,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Channel", class: "btn btn-info" %>
   </div>
 <% end %>

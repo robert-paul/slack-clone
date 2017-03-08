@@ -10,6 +10,7 @@ class ChatroomsController < ApplicationController
   # GET /chatrooms/1
   # GET /chatrooms/1.json
   def show
+    @message = @chatroom.messages.order(created_at: :desc).limit(25).reverse
   end
 
   # GET /chatrooms/new
@@ -28,7 +29,7 @@ class ChatroomsController < ApplicationController
 
     respond_to do |format|
       if @chatroom.save
-        format.html { redirect_to @chatroom, notice: 'Chatroom was successfully created.' }
+        format.html { redirect_to @chatroom, notice: 'Channel was successfully created.' }
         format.json { render :show, status: :created, location: @chatroom }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class ChatroomsController < ApplicationController
   def update
     respond_to do |format|
       if @chatroom.update(chatroom_params)
-        format.html { redirect_to @chatroom, notice: 'Chatroom was successfully updated.' }
+        format.html { redirect_to @chatroom, notice: 'Channel was successfully updated.' }
         format.json { render :show, status: :ok, location: @chatroom }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class ChatroomsController < ApplicationController
   def destroy
     @chatroom.destroy
     respond_to do |format|
-      format.html { redirect_to chatrooms_url, notice: 'Chatroom was successfully destroyed.' }
+      format.html { redirect_to chatrooms_url, notice: 'Channel was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
