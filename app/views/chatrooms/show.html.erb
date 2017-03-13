@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>#</strong>
   <%= @chatroom.name %>
 </p>
 
-<div data-behavior='messages' style="padding-bottom: 8px;">
+<div style="padding-bottom: 8px;">
   <% @message.each do |message| %>
       <%= render message %>
   <% end %>
