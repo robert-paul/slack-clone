@@ -1,24 +1,11 @@
-# README
+# Slack-Clone for Sac Ruby Meetup on Action Cable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I was going to have us build the app together from scratch but quickly realized it would take way too long. So here's a functional basic messaging app that we are going to integrate websockets into.
 
-Things you may want to cover:
+## Guide for people new to Ruby on Rails
 
-* Ruby version
+If you've never used ruby or Ruby on Rails before, http://installrails.com/ has a fantastic guide to get you up and running. 
 
-* System dependencies
+Then clone the repo to your desktop, open up the project in your favorite text editor, open up the terminal and type `cd desktop/slack-clone-master`. Now just migrate the database with `rails db:migrate` and you're ready to go.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Message me at robert.na.paul@gmail.com if you have questions!
