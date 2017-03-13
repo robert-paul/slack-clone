@@ -2,7 +2,7 @@
 
 I was going to have us build the app together from scratch but quickly realized it would take way too long. So here's a functional basic messaging app that we are going to integrate websockets into.
 
-## Guide for people new to Ruby on Rails
+### For people fresh to Ruby on Rails
 
 If you've never used ruby or Ruby on Rails before, http://installrails.com/ has a fantastic guide to get you up and running. 
 
