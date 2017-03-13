@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>#</strong>
-  <%= @chatroom.name %>
-</p>
+<h3>
+  <strong>#</strong><%= @chatroom.name %>
+</h3>
 
-<div style="padding-bottom: 8px;">
+<div style="border-top: thin solid lightgrey; padding-top: 8px; padding-bottom: 8px;">
   <% @message.each do |message| %>
       <%= render message %>
   <% end %>
 </div>
 
-<%= form_for [@chatroom, Message.new] do |f| %>
-    <%= f.text_area :body, rows: 1, class: "form-control", autofocus: true %>
-<% end %>
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6">
+    <%= form_for [@chatroom, Message.new] do |f| %>
+        <%= f.text_area :body, rows: 1, class: "form-control", autofocus: true, placeholder: "Message ##{@chatroom.name}" %>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
-<%= link_to 'Back', chatrooms_path %>
+
