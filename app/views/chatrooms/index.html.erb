@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
 <h1>Channels</h1>
 
 <table>
@@ -22,3 +23,5 @@
 <br>
 
 <%= link_to 'Create new channel', new_chatroom_path, class: "btn btn-default" %>
+
+<% end %>
